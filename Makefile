@@ -4,8 +4,8 @@ CXXFLAGS+=-Wall -Wextra -pedantic
 CXXFLAGS+=`pkg-config --cflags sdl2`
 LDFLAGS+=`pkg-config --libs sdl2`
 
-run: main.cc
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o run main.cc
+run: main.cc sdl.cc
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o run main.cc sdl.cc
 
 clean:
 	rm -f run
